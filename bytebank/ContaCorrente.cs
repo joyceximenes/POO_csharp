@@ -12,6 +12,17 @@ namespace bytebank
             public string conta;
             public string agencia;
             public double saldo;
+
+            public bool sacar(double valor)
+            {
+            if (saldo < valor)
+                return false;
+            else
+            {
+                saldo = saldo - valor;
+                return true;
+            }
+            }
     }
 }
 
